@@ -1,0 +1,64 @@
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+
+    &-inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 41px 0;
+    }
+
+    &-logo {
+        color: $title-color;
+        font-family: $title-font, sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1;
+        text-transform: uppercase;
+    }
+}
+
+.header-menu {
+
+    &__list {
+        @include sm-block() {
+            position: absolute;
+            top: 70px;
+            right: 0;
+            display: none;
+            width: 100%;
+            padding-bottom: 20px;
+            background: #fdfdfd;
+            text-align: center;
+            z-index: 2;
+
+            &--dark {
+                background: #c9d1d9;
+            }
+        }
+
+        &--active {
+            @include sm-block() {
+                display: block;
+            }
+        }
+    }
+
+    &__item {
+        @include sm-block() {
+            margin-left: 0;
+        }
+    }
+
+    &__item+&__item {
+        @include sm-block() {
+            margin-left: 0;
+            margin-top: 15px;
+        }
+    }
+}

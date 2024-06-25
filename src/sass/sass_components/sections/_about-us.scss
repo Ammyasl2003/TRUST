@@ -1,0 +1,20 @@
+.about-us {
+    width: calc(50% - 30px);
+
+    @include sm-block() {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    &__title {
+        display: block;
+    }
+
+    &__desc {
+        text-align: justify;
+        margin-bottom: 0;
+        @include sm-block() {
+            margin: 0;
+        }
+    }
+}

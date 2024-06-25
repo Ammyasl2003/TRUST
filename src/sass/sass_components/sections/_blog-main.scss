@@ -1,0 +1,11 @@
+.blog {
+    &__posts {
+        width: calc(66.66667% - 30px);
+        @include md(width, 100%);
+    }
+
+    &__aside {
+        width: calc(25% - 30px);
+        @include md(display, none);
+    }
+}

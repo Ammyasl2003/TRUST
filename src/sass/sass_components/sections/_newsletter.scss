@@ -1,0 +1,51 @@
+.newsletter {
+    background: $main-theme-color;
+
+    &__inner {
+        @include row-flex();
+        padding: 30px 0;
+        @include md(justify-content, center);
+    }
+
+    &__text {
+        @include col();
+        @include size(6);
+        @include md(display, none);
+    }
+
+    &__title {
+        margin-bottom: 20px;
+        color: #fff;
+        line-height: 40px;
+    }
+}
+
+.newsletter-message {
+    @include col();
+    @include size(6);
+    @include size-md(10);
+    @include size-sm(12);
+    background: #fff;
+    padding: 20px 25px;
+
+    @include sm(padding, 10px 15px);
+
+    &__title {
+        margin-bottom: 18px;
+        line-height: 40px;
+
+        &::after {
+            content: none;
+        }
+    }
+
+    &__desc {
+        margin-bottom: 30px;
+        @include sm(text-align, justify);
+    }
+
+    &__form {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
